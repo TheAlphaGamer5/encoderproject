@@ -1,7 +1,8 @@
 var inputTalk = document.getElementById("inputArea").value;
 
 function translate(){
-  return inputTalk;
+  question = "User: " + inputTalk + "<br>";
+  document.getElementById("textArea").innerHTML += question;
   console.log("y u no work");
 }
 
