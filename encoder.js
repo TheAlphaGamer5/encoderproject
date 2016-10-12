@@ -3,7 +3,21 @@ $("#inputArea").keyup(function(e){
   document.getElementById("textArea").innerHTML = inputText;
 });
 
-
+var caesarCipher = {
+	"A": "",
+	"B": "",
+	"C": "",
+	"D": "",
+	"E": "",
+	"F": "",
+	"G": "",
+	"H": "",
+	"I": "",
+	"J": "",
+  "K": "",
+  "L": "",
+  "M": "",
+}
 
 $("input[type='radio']").click(function(){
   $("input:checked").prop('checked',false );
