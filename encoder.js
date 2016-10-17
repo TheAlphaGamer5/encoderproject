@@ -1,22 +1,45 @@
 $("#inputArea").keyup(function(e){
   var inputText = document.getElementById("inputText").value;
   document.getElementById("textArea").innerHTML = inputText;
+  if ($("input:checked").val() == "echo") {
+    console.log("echo");
+  }
+  else if ($("input:checked").val() == "caesarCipher") {
+    console.log("caesarCipher");
+  }
+  else if ($("input:checked").val() == "runes") {
+    console.log("runes");
+  }
+
 });
 
 var caesarCipher = {
-	"A": "",
-	"B": "",
-	"C": "",
-	"D": "",
-	"E": "",
-	"F": "",
-	"G": "",
-	"H": "",
-	"I": "",
-	"J": "",
-  "K": "",
-  "L": "",
-  "M": "",
+	"a": "z",
+	"b": "a",
+	"c": "b",
+	"d": "c",
+	"e": "d",
+	"f": "e",
+	"g": "f",
+	"h": "g",
+	"i": "h",
+	"J": "i",
+  "k": "j",
+  "L": "k",
+  "m": "l",
+  "n": "m",
+  "o": "n",
+  "p": "o",
+  "q": "p",
+  "r": "q",
+  "s": "r",
+  "t": "s",
+  "u": "t",
+  "v": "u",
+  "w": "v",
+  "x": "w",
+  "y": "x",
+  "z": "y"
 }
 
 $("input[type='radio']").click(function(){
@@ -24,12 +47,13 @@ $("input[type='radio']").click(function(){
   $(this).prop('checked',true);
 });
 
-if ($("input:checked").val() == "echo") {
+/* if ($("input:checked").val() == "echo") {
   console.log("echo");
 }
-if ($("input:checked").val() == "caesarCipher") {
+else if ($("input:checked").val() == "caesarCipher") {
   console.log("caesarCipher");
 }
-if ($("input:checked").val() == "runes") {
+else if ($("input:checked").val() == "runes") {
   console.log("runes");
 }
+*/
