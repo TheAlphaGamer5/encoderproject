@@ -1,19 +1,4 @@
-$("#inputArea").keyup(function(e){
-  var inputText = document.getElementById("inputText").value;
-  document.getElementById("textArea").innerHTML = inputText;
-  if ($("input:checked").val() == "echo") {
-    console.log("echo");
-  }
-  else if ($("input:checked").val() == "caesarCipher") {
-    console.log("caesarCipher");
-  }
-  else if ($("input:checked").val() == "runes") {
-    console.log("runes");
-  }
-
-});
-
-var caesarCipher = {
+var caesarCipherEncoder = {
 	"a": "z",
 	"b": "a",
 	"c": "b",
@@ -42,18 +27,26 @@ var caesarCipher = {
   "z": "y"
 }
 
+
+
+$("#inputArea").keyup(function(e){
+  var inputText = document.getElementById("inputText").value;
+  document.getElementById("textArea").innerHTML = inputText;
+  if ($("input:checked").val() == "echo") {
+    console.log("echo");
+  }
+  else if ($("input:checked").val() == "caesarCipher") {
+    console.log("caesarCipher");
+    caesarCipherEncoder
+    $("#textArea").append(caesarCipherEncoder[]);
+  }
+  else if ($("input:checked").val() == "runes") {
+    console.log("runes");
+  }
+
+});
+
 $("input[type='radio']").click(function(){
   $("input:checked").prop('checked',false );
   $(this).prop('checked',true);
 });
-
-/* if ($("input:checked").val() == "echo") {
-  console.log("echo");
-}
-else if ($("input:checked").val() == "caesarCipher") {
-  console.log("caesarCipher");
-}
-else if ($("input:checked").val() == "runes") {
-  console.log("runes");
-}
-*/
