@@ -85,3 +85,15 @@ $("input[type='radio']").click(function(){
   $("input:checked").prop('checked',false );
   $(this).prop('checked',true);
 });
+
+
+$("#translationInputText").keydown(function (e){
+  if (e.keyCode == 13){
+    var message = $("#translationInputText").val();
+    messageArray = message.split("");
+    for (var i = 0; i < messageArray.length; i++) {
+      var translatedNumber = messageArray[i].charCodeAt(0)-32+1;
+      $("#translationArea").append(alphabet[translatedNumber]);
+    }
+  }
+})
