@@ -60,19 +60,21 @@ var nordicRunes = {
 	32:" "
 }
 
-
+//ENCODER
 
 $("#inputArea").keyup(function(e) {
-
+//ECHO
   if ($("input:checked").val() == "echo") {
     var inputText = document.getElementById("inputText").value;
     document.getElementById("textArea").innerHTML = inputText;
   }
+  //CAESAR CIPHER
   else if ($("input:checked").val() == "caesarCipher") {
     //console.log("caesarCipher");
    var answer = alphabet[e.keyCode - 1];
    $('#textArea').append(answer);
   }
+  //RUNES 
   else if ($("input:checked").val() == "runes") {
     console.log("runes");
     var answerRunes = nordicRunes[e.keyCode];
@@ -86,6 +88,7 @@ $("input[type='radio']").click(function(){
   $(this).prop('checked',true);
 });
 
+//DECODER
 
 $("#translationInputText").keydown(function (e){
   if (e.keyCode == 13){
