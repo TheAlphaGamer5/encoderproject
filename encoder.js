@@ -1,4 +1,4 @@
-
+//Alphabet object
 var alphabet = {
   64:"z",
 	65:"a",
@@ -29,7 +29,7 @@ var alphabet = {
   90:"z",
 	32:" "
 }
-
+//Runes Object
 var nordicRunes = {
   65:"<img src = 'images/runes/a.gif'>",
 	66:"<img src = 'images/runes/b.gif'>",
@@ -74,7 +74,7 @@ $("#inputArea").keyup(function(e) {
    var answer = alphabet[e.keyCode - 1];
    $('#textArea').append(answer);
   }
-  //RUNES 
+  //RUNES
   else if ($("input:checked").val() == "runes") {
     console.log("runes");
     var answerRunes = nordicRunes[e.keyCode];
